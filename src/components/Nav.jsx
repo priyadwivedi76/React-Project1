@@ -4,7 +4,7 @@ const Nav=()=>{
     return(
         <>
             <nav className='w-[15%] h-full bg-zinc-100 flex flex-col items-center pt-5'>
-                <a className='px-5 py-2 border rounded border-blue-300 text-blue-500' href="/create">Add New Project</a>
+                <a className='px-5 py-2 border hover:bg-blue-500 hover:text-white rounded border-blue-300 text-blue-500' href="/create">Add New Project</a>
                 <hr className='my-3 w-[80%]'/>
                 <h1 className='text-2xl mb-3 w-[80%]'>Category Filter</h1>
                 <ul className='w-[80%]'>
