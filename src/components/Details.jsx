@@ -14,7 +14,7 @@ const Details=()=>{
                 <h3 className="text-emerald-600 mb-3">$ 109.95</h3>
                 <p className="mb-5">Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</p>
                 <Link className='px-5 mr-2 hover:bg-blue-500 hover:text-white py-2 border rounded border-blue-300 text-blue-500'>Edit</Link>
-                <Link className='px-5 mr-2 py-2 hover:bg-red-6+00 hover:text-white border rounded border-blue-300 text-blue-500'>Delete</Link>
+                <Link className='px-5 mr-2 py-2 hover:bg-red-600 hover:text-white border rounded border-red-300 text-red-500'>Delete</Link>
             </div>
         </div>
     )
