@@ -1,4 +1,4 @@
-import axios from "./axios";
+import axios from "./Axios";
 import React,{ useEffect, useState} from "react";
 import ProductContext from "./ProductContext";
 
