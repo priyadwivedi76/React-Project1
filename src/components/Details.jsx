@@ -5,9 +5,14 @@ import Loading from "./Loading";
 
 
 const Details=()=>{
+    //Initialize the user interface
     const [product,setProduct]=useState(null);
+
+    //Fetch the product details using the provided id
     const {id}=useParams();
     console.log(id);
+
+    //Fetch the product data from the server using the provided id
     const getSingleProduct=async()=>{
         try{
             const {data} =await axios.get(`/products/${id}`);
@@ -17,9 +22,12 @@ const Details=()=>{
         }
     }
 
+    //Fetch product data when the component mounts or when the id changes
     useEffect(()=>{
         getSingleProduct();
     },[]);
+
+    //Display the product details when the data is available
     return product ? (
         <div className="w-[70%] flex justify-between items-center h-full m-auto p-[10%]">
             <img
