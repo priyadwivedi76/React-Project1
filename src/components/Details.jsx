@@ -43,7 +43,7 @@ const Details=()=>{
                 <h3 className="text-zinc-500 my-5">{product.category}</h3>
                 <h3 className="text-emerald-600 mb-3">{`$ ${product.price}`}</h3>
                 <p className="mb-5">{product.description}</p>
-                <Link className='px-5 mr-2 hover:bg-blue-500 hover:text-white py-2 border rounded border-blue-300 text-blue-500'>Edit</Link>
+                <Link to={`/edit/${product.id}`} className='px-5 mr-2 hover:bg-blue-500 hover:text-white py-2 border rounded border-blue-300 text-blue-500'>Edit</Link>
                 <button onClick={()=>ProductDelete(product.id)} className='px-5 mr-2 py-2 hover:bg-red-600 hover:text-white border rounded border-red-300 text-red-500'>Delete</button>
             </div>
         </div>
