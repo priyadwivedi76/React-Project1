@@ -20,6 +20,15 @@ const Home=()=>{
     //Get the category for filtering
     const [filteredProduct,setfilteredProduct]=useState(null)
 
+    //Fetch the products based on the category if provided in the url
+    const getProductCategory=async ()=>{
+        try{
+            const {data}=await axios.get(`/products/category/${category}`)
+            setfilteredProduct(data);
+        }catch(error){
+            console.log(error);
+        }
+    }
 
     //Fetch the products on component mount or when the category changes
     useEffect(()=>{
@@ -31,7 +40,7 @@ const Home=()=>{
 
         //Fetch the products based on the category if provided in the url if it's different from the current category
         if(category != "undefined"){
-            setfilteredProduct(products.filter(p=>p.category==category))
+        getProductCategory()
         };
     },[category,products]);
 

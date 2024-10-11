@@ -1,12 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { nanoid } from "nanoid";
-import ProductContext from "../utils/ProductContext";
-import { useNavigate } from "react-router-dom";
 
 
 const Create=()=>{
-    const Navigate=useNavigate();
-    const [products, setProducts]=useContext(ProductContext)
+    const [products, setProduct]=useState("");
     const [title,setTitle]=useState("");
     const [image,setImage]=useState("");
     const [category,setCategory]=useState("");
@@ -15,10 +12,6 @@ const Create=()=>{
 
     const AddProductHandler=(e)=>{
         e.preventDefault();
-        if(title.trim().length < 5 || image.trim().length < 5 || category.trim().length < 5 || price.trim().length < 1 || description.trim().length < 5 ){
-            alert("Enter atleast 4 characters");
-            return;
-        }
         const product={
             id:nanoid(),
             title,
@@ -27,11 +20,7 @@ const Create=()=>{
             price,
             description
         }
-        setProducts([...products,product]);
-        localStorage.setItem(
-            "products",JSON.stringify([...products,product])
-        )
-        Navigate('/');
+        setProduct([...products,product]);
     }
 
     return(
