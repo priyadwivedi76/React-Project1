@@ -40,7 +40,8 @@ const Home=()=>{
 
         //Fetch the products based on the category if provided in the url if it's different from the current category
         if(category != "undefined"){
-        getProductCategory()
+            setfilteredProduct(products.filter(p=>p.category == category))
+        //getProductCategory()
         };
     },[category,products]);
 
